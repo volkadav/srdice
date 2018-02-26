@@ -3,9 +3,7 @@ dead simple shadowrun 5th edition dice roller (console, written while half-drunk
 
 # making it
 
-gcc -o srdice srdice.c
-
-copy it somewhere in your path i guess?
+run make, copy srdice binary wherever you want (e.g. /usr/local/bin)
 
 # tested platforms
 
