@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 
 #define RED     "\x1b[31m"
 #define GREEN   "\x1b[32m"
@@ -55,7 +56,7 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
   }
 
-  srand(time(NULL));
+  srand(time(NULL) % getpid());
 
   int hits = 0;
   int glitches = 0;
