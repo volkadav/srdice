@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#ifndef __APPLE__ // only use this on non-OSX
 #include <unistd.h>
+#endif
 
 #define RED     "\x1b[31m"
 #define GREEN   "\x1b[32m"
@@ -56,7 +58,11 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
   }
 
+#ifdef __APPLE__
+  sranddev();
+#else
   srand(time(NULL) % getpid());
+#endif
 
   int hits = 0;
   int glitches = 0;
