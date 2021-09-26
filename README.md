@@ -9,4 +9,4 @@ run make, copy srdice binary wherever you want (e.g. /usr/local/bin)
 
 linux (debian, x86)
 
-osx (x86)
+osx (x86, M1)
